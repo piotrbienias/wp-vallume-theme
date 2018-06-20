@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("#footer .menu").addClass("linklist nospace")});
