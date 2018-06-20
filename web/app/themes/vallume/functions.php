@@ -2,8 +2,35 @@
 
 remove_action('wp_head', 'wp_generator');
 
+add_theme_support( 'post-thumbnails' ); 
 
+require_once('helper.php');
 require_once('theme-options/options-page.php');
+require_once('shortcodes/combine.php');
+require_once('post-types/testimonial.php');
+
+require_once('widgets/latest-posts.php');
+
+
+
+
+/**
+ * FIX HANDLING OF BELOW CODE
+ */
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+// function wpse_wpautop_nobr( $content ) {
+//     return wpautop( $content, false );
+// }
+
+// add_filter( 'the_content', 'wpse_wpautop_nobr' );
+// add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
+/**
+ * FIX HANDLING OF ABOVE CODE
+ */
+
+
 
 
 // enqueue style files
@@ -134,3 +161,18 @@ function register_footer_widgets() {
 
 }
 add_action( 'widgets_init', 'register_footer_widgets' );
+
+
+function register_post_sidebar() {
+    register_sidebar(
+        array(
+            'name'          => 'Sidebar',
+            'id'            => 'sidebar',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="heading">',
+            'after_title'   => '</h6>'
+        )
+    );
+}
+add_action( 'widgets_init', 'register_post_sidebar' );

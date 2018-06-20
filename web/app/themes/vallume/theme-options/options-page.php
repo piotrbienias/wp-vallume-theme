@@ -1,6 +1,7 @@
 <?php
 
 require_once('settings.php');
+require_once('home.php');
 
 
 /**
@@ -8,7 +9,7 @@ require_once('settings.php');
  */
 function vallume_options_page_scripts() {
     wp_enqueue_media();
-    
+
     wp_register_script( 'vallume-options-script', get_template_directory_uri() . '/theme-options/js/scripts.js', array( 'jquery' ), false, true );
     wp_enqueue_script( 'vallume-options-script' );
 }
