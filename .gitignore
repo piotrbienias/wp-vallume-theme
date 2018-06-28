@@ -19,8 +19,10 @@ web/.htaccess
 vendor/*
 !vendor/.gitkeep
 
+# Node modules
 node_modules/
 
+# Bedrock files
 CHANGELOG.md
 CODE_OF_CONDUCT.md
 LICENSE.md
