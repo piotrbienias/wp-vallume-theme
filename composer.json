@@ -30,6 +30,10 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/piotrbienias/wp-job-offers.git"
     }
   ],
   "require": {
@@ -39,7 +43,8 @@
     "johnpbloch/wordpress": "4.9.6",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "firebase/php-jwt": "^5.0"
+    "firebase/php-jwt": "^5.0",
+    "piotrbienias/wp-job-offers": "1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
