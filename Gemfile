@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'capistrano'
+gem 'capistrano', '~>3.5.0'
 gem 'capistrano-composer'
 
 # Capistrano WPCLI

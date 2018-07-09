@@ -32,3 +32,6 @@ package-lock.json
 README.md
 
 php-errors.log
+db.sql
+config/deploy/*
+config/deploy.rb
